@@ -84,7 +84,7 @@ spec:
             securityContext:
                 runAsUser: 1000
                 runAsGroup: 1000
-                fsGroup: 65534 # (Requires CSI support)
+                fsGroup: 1000 # (Requires CSI support)
                 fsGroupChangePolicy: OnRootMismatch # (Requires CSI support)
             volumes:
                 - name: tmp

@@ -21,6 +21,10 @@ on:
       DISCORD_WEBHOOK:
         required: false
 
+concurrency:
+  group: app-builder-${{ inputs.app }}
+  cancel-in-progress: false
+
 permissions:
   contents: read
 
