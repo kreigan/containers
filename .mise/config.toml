@@ -20,6 +20,7 @@ usage = '''
 arg "<app>"
 '''
 run = '''
+rsync -aqIP {{config_root}}/apps/"$usage_app"/ .
 docker buildx bake --no-cache --metadata-file docker-bake.json --set=*.output=type=docker --load
 TEST_IMAGE="$(jq -r '."image-local"."image.name" | sub("^docker.io/library/"; "")' docker-bake.json)" go test -v {{config_root}}/apps/"$usage_app"/...
 '''
