@@ -52,12 +52,12 @@
   },
   packageRules: [
     {
-      description: [
-        "Group the Go version: the go.mod directive (gomod) and the mise toolchain pin bump together in one PR",
-      ],
-      matchManagers: ["gomod", "mise"],
+      description: "Go Toolchain Group",
+      matchManagers: ["mise", "gomod"],
       matchDepNames: ["go"],
-      groupName: "golang",
+      matchFileNames: [".mise/config.toml", "go.mod"],
+      groupName: "Go toolchain",
+      groupSlug: "go-toolchain",
     },
     {
       description: ["Release Rules for App Updates"],
