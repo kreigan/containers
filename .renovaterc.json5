@@ -52,14 +52,6 @@
   },
   packageRules: [
     {
-      description: "Go Toolchain Group",
-      matchManagers: ["mise", "gomod"],
-      matchDepNames: ["go"],
-      matchFileNames: [".mise/config.toml", "go.mod"],
-      groupName: "Go toolchain",
-      groupSlug: "go-toolchain",
-    },
-    {
       description: ["Release Rules for App Updates"],
       addLabels: ["app/{{parentDir}}"],
       additionalBranchPrefix: "{{parentDir}}-",
