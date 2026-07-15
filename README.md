@@ -70,7 +70,7 @@ spec:
         spec:
             containers:
                 - name: home-assistant
-                  image: ghcr.io/home-operations/home-assistant:2025.5.1
+                  image: ghcr.io/home-operations/home-assistant:2025.5.1@sha256:516ae5c85089b3f2960cf2a21dc3c105356969499964fabf0b0358e5f3a7e0a2
                   securityContext: # May require mounting in additional dirs as emptyDir
                       allowPrivilegeEscalation: false
                       capabilities:
